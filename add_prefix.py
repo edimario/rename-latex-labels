@@ -18,10 +18,10 @@ def add_prefix(prefix, filename):
         print(original, "\t->\t", replaced)
     do_replacement = input("Type y to continue with replacement\n")
     if do_replacement == "y":
-        replaced = re.sub(r"(\\(?:label|ref)\{)(.*?)(\})", r"\1" + prefix + r":\2\3",text)
+        replaced = re.sub(r"(\\(?:label|ref)\{)(.*?)(\})", r"\1" + prefix + r":\2\3", text)
         with open(filename, 'w') as f_obj:
             f_obj.write(replaced)
-        print("Replacement done!")            
+        print("Replacement done!")
     else:
         print("Replacement aborted!")
 
